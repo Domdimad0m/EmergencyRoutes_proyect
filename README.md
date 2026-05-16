@@ -1,5 +1,15 @@
 # EmergencyRoutes_proyect
 
+## Planteamiento del problema
+Un sistema de despacho de ambulancias que debe encontrar el hospital adecuado más cercano según el tipo de emergencia y la disponibilidad de camas. El sistema debe considerar tráfico en tiempo real y la disponibilidad de especialidades médicas.
+
+## Estructuras requeridas
+Dijkstra — hospital más cercano con camas disponibles del tipo requerido
+Prim — red mínima de rutas de emergencia entre todos los hospitales
+KD-tree — hospitales dentro de radio R km del lugar de la emergencia
+1 estructura libre a elección del equipo (debe justificarse con análisis de complejidad) 
+
+## Fuente de datos
 El proyecto consiste en elaborar un sistema de despacho de ambulancias que debe encontrar el hospital adecuado más cercano según el tipo de emergencia y la disponibilidad de camas. El sistema debe considerar tráfico en tiempo real y la disponibilidad de especialidades médicas.
 
 Se construyó un dataset en formato csv basado en hospitales reales de Álvaro Obregón obtenidos mediante geolocalización pública.
