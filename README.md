@@ -3,7 +3,7 @@
 El proyecto consiste en elaborar un sistema de despacho de ambulancias que debe encontrar el hospital adecuado más cercano según el tipo de emergencia y la disponibilidad de camas. El sistema debe considerar tráfico en tiempo real y la disponibilidad de especialidades médicas.
 
 Se construyó un dataset en formato csv basado en hospitales reales de Álvaro Obregón obtenidos mediante geolocalización pública.
-Se usó [este link](https://overpass-turbo.eu/) para poblar el csv base sobre la inforamción de los hospitales para tal alcadía 
+Se usó [Overpass turbo (link)](https://overpass-turbo.eu/) para poblar el csv base sobre la inforamción de los hospitales para tal alcadía 
 
 Ejecuta este código en la página para extraer los datos de hospitales y rutas de álvaro Obregón
 
