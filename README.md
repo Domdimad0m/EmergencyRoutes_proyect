@@ -31,6 +31,8 @@ area["name"="Álvaro Obregón"]->.searchArea;
 
 out center;
 ```
+Resultado esperado: <img width="1053" height="806" alt="image" src="https://github.com/user-attachments/assets/78d1ed17-f068-4297-8ce6-f941489c5f3e" />
+
 
 Consulta de los nodos que hay en la alcaldía:
 ```{psql}
@@ -46,6 +48,8 @@ out body 30;
 >;
 out skel qt;
 ```
+Resultado esperado: <img width="1057" height="808" alt="image" src="https://github.com/user-attachments/assets/125ea755-2832-4459-8d7d-0b30da5167c1" />
+
 
 Una vez se haya ejecutado la consulta da click en exportar -> datos -> archivo json. 
 
