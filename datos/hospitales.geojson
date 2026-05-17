@@ -1,0 +1,287 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-05-16T05:26:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/11632168",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Complejo de hospitales IMSS",
+        "operator": "Instituto Mexicano del Seguro Social",
+        "operator:short": "IMSS",
+        "operator:type": "public",
+        "operator:wikidata": "Q904999",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.2002716,
+          19.3368204
+        ]
+      },
+      "id": "relation/11632168"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/27804337",
+        "addr:city": "México",
+        "addr:housenumber": "116",
+        "addr:postcode": "01120",
+        "addr:street": "Sur 136",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general;paediatrics;gynaecology;emergency;surgery;cardiology;oncology;radiology;intensive;internal",
+        "internet_access": "wlan",
+        "name": "Centro Médico ABC",
+        "phone": "5552308000",
+        "website": "https://centromedicoabc.com/",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.2039979,
+          19.4002123
+        ]
+      },
+      "id": "way/27804337"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/319436637",
+        "amenity": "hospital",
+        "created_by": "Potlatch 0.10f",
+        "name": "Hospital San Angel Inn"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.199841,
+          19.3403526
+        ]
+      },
+      "id": "node/319436637"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/739035810",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Clínica Hospital 8 IMSS",
+        "operator": "Instituto Mexicano del Seguro Social",
+        "operator:short": "IMSS",
+        "operator:wikidata": "Q904999"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.2009685,
+          19.3366121
+        ]
+      },
+      "id": "node/739035810"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/883666969",
+        "addr:housenumber": "120 y Canario",
+        "addr:postcode": "01140",
+        "addr:street": "General Felipe Ángeles",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "internet_access": "wlan",
+        "name": "Hospital General Dr. Fernando Quiroz Gutiérrez ISSSTE",
+        "opening_hours": "24/7",
+        "operator": "Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado",
+        "operator:short": "ISSSTE",
+        "operator:wikidata": "Q954557",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.1942231,
+          19.3943867
+        ]
+      },
+      "id": "way/883666969"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/986068924",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Centro de Atención a la Salud T-III Jalalpa",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.2389208,
+          19.3716414
+        ]
+      },
+      "id": "way/986068924"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1364990384",
+        "amenity": "hospital",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.1765089,
+          19.360337
+        ]
+      },
+      "id": "way/1364990384"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1365216619",
+        "addr:city": "Ciudad de México",
+        "addr:housenumber": "1321",
+        "addr:postcode": "01030",
+        "addr:street": "Avenida Universidad",
+        "amenity": "hospital",
+        "building": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Hospital Regional \"Lic. Adolfo López Mateos\"",
+        "operator": "Instituto de Seguridad y Servicios Sociales para los Trabajadores del Estado",
+        "operator:short": "ISSSTE",
+        "operator:type": "government",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.1726046,
+          19.3583559
+        ]
+      },
+      "id": "way/1365216619"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1365266055",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Hospital Regional \"Lic. Adolfo López Mateos\"",
+        "operator": "Instituto de Seguridad y Servicios Sociales para los Trabajadores del Estado",
+        "operator:short": "ISSSTE",
+        "operator:type": "government",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.1730063,
+          19.3587128
+        ]
+      },
+      "id": "way/1365266055"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2324519237",
+        "addr:city": "Distrito Federal",
+        "addr:postcode": "11800",
+        "addr:street": "5 de Mayo esq Centenario Col.Ex Hacienda de Tarango",
+        "amenity": "hospital",
+        "check_date": "2025-12-24",
+        "emergency": "yes",
+        "name": "Hospital General Enrique Cabrera",
+        "note": "Negligencia medica de los doctores y de las enfermeras",
+        "phone": "1285 7104, 1285 7108",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.2243126,
+          19.3615894
+        ]
+      },
+      "id": "node/2324519237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3977351148",
+        "amenity": "hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.2726709,
+          19.3290459
+        ]
+      },
+      "id": "node/3977351148"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4403446355",
+        "addr:housenumber": "117",
+        "addr:street": "Calle Yucatán",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Hospital vicentino y casa hogar",
+        "phone": "+525555504637"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.1999184,
+          19.339686
+        ]
+      },
+      "id": "node/4403446355"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9768668045",
+        "addr:city": "Ciudad de México",
+        "addr:housenumber": "3170",
+        "addr:street": "Avenida 5 de Mayo",
+        "amenity": "hospital",
+        "check_date": "2025-12-24",
+        "description": "Impresión diagnóstica, atención por lesiones, ILE e IVE. Horario de 08:00 - 16:00 hrs. Lunes a viernes. Tel. 12857104. Correo: magdalena.hernandez.sodexo@gmail.com",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "Hospital General Enrique Cabrera"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.2241327,
+          19.3614426
+        ]
+      },
+      "id": "node/9768668045"
+    }
+  ]
+}

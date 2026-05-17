@@ -1,0 +1,14 @@
+id_osm,nombre,lat,lon,especialidades_osm,emergencias,institucion
+relation/11632168,Complejo de hospitales IMSS,19.3368204,-99.2002716,general;trauma;urgencias,yes,IMSS
+way/27804337,Centro Médico ABC,19.4002123,-99.2039979,general;cardiologia;pediatria;ginecologia;emergencia;cirugia;cardiologia;oncologia;cardiologia;radiologia;intensivo;interno,yes,
+node/319436637,Hospital San Angel Inn,19.3403526,-99.199841,pediatria;urgencias;cirugia,yes,
+node/739035810,Clínica Hospital 8 IMSS,19.3366121,-99.2009685,general;trauma;neurologia;urgencias,yes,IMSS
+way/883666969,Hospital General Dr. Fernando Quiroz Gutiérrez ISSSTE,19.3943867,-99.1942231,general;cardiologia;radiologia;intensivo,yes,ISSSTE
+way/986068924,Centro de Atención a la Salud T-III Jalalpa,19.3716414,-99.2389208,pediatria;ginecologia;urgencias,yes,
+way/1364990384,,19.360337,-99.1765089,general;cirugia;oncologia;radiologia,yes,
+way/1365216619,"Hospital Regional ""Lic. Adolfo López Mateos""",19.3583559,-99.1726046,trauma;ortopedia;urgencias;cirugia,yes,ISSSTE
+way/1365266055,"Hospital Regional ""Lic. Adolfo López Mateos""",19.3587128,-99.1730063,general;neurologia;cardiologia;intensivo,yes,ISSSTE
+node/2324519237,Hospital General Enrique Cabrera,19.3615894,-99.2243126,pediatria;general;urgencias;interno,yes,
+node/3977351148,,19.3290459,-99.2726709,general;ginecologia;maternidad;cirugia,yes,
+node/4403446355,Hospital vicentino y casa hogar,19.339686,-99.1999184,trauma;urgencias;radiologia;intensivo,yes,
+node/9768668045,Hospital General Enrique Cabrera,19.3614426,-99.2241327,general;cardiologia;oncologia;neurologia,yes,

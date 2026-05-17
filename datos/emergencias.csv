@@ -1,0 +1,10 @@
+id_emergencia,id_nodo_origen,nombre_origen,lat,lon,especialidad_requerida,prioridad
+E01,V8_0,Avenida Jalisco,19.3974297,-99.1900139,urgencias,ROJO
+E02,V2_0,Avenida San Jerónimo,19.3320826,-99.2074093,trauma,AMARILLO
+E03,V31_0,Boulevard Reforma,19.3846882,-99.2447567,cardiologia,VERDE
+E04,V36_1,Carretera México - Toluca (Cuota),19.3737931,-99.2632705,urgencias,ROJO
+E05,V34_2,,19.3803952,-99.2495981,trauma,VERDE
+E06,V57_1,Anillo Periférico,19.3565802,-99.198381,cardiologia,AMARILLO
+E07,V77_2,Camino al Desierto de los Leones,19.3470762,-99.2029812,urgencias,AMARILLO
+E08,V28_2,Carretera México - Toluca (Cuota),19.3830376,-99.2474181,trauma,ROJO
+E09,V3_0,Avenida Paseo del Pedregal,19.3089932,-99.2043419,cardiologia,VERDE

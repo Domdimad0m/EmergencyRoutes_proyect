@@ -1,0 +1,58 @@
+id_hospital,hospital,especialidad,camas_totales,camas_ocupadas
+relation/11632168,Complejo de hospitales IMSS,general,1,3
+relation/11632168,Complejo de hospitales IMSS,trauma,4,3
+relation/11632168,Complejo de hospitales IMSS,urgencias,2,9
+way/27804337,Centro Médico ABC,general,11,10
+way/27804337,Centro Médico ABC,cardiologia,9,9
+way/27804337,Centro Médico ABC,pediatria,4,8
+way/27804337,Centro Médico ABC,ginecologia,9,0
+way/27804337,Centro Médico ABC,emergencia,13,6
+way/27804337,Centro Médico ABC,cirugia,11,9
+way/27804337,Centro Médico ABC,cardiologia,13,9
+way/27804337,Centro Médico ABC,oncologia,9,7
+way/27804337,Centro Médico ABC,cardiologia,2,5
+way/27804337,Centro Médico ABC,radiologia,10,3
+way/27804337,Centro Médico ABC,intensivo,11,9
+way/27804337,Centro Médico ABC,interno,7,3
+node/319436637,Hospital San Angel Inn,pediatria,5,5
+node/319436637,Hospital San Angel Inn,urgencias,12,6
+node/319436637,Hospital San Angel Inn,cirugia,1,10
+node/739035810,Clínica Hospital 8 IMSS,general,8,3
+node/739035810,Clínica Hospital 8 IMSS,trauma,14,9
+node/739035810,Clínica Hospital 8 IMSS,neurologia,15,1
+node/739035810,Clínica Hospital 8 IMSS,urgencias,13,7
+way/883666969,Hospital General Dr. Fernando Quiroz Gutiérrez ISSSTE,general,13,7
+way/883666969,Hospital General Dr. Fernando Quiroz Gutiérrez ISSSTE,cardiologia,4,6
+way/883666969,Hospital General Dr. Fernando Quiroz Gutiérrez ISSSTE,radiologia,13,0
+way/883666969,Hospital General Dr. Fernando Quiroz Gutiérrez ISSSTE,intensivo,3,2
+way/986068924,Centro de Atención a la Salud T-III Jalalpa,pediatria,11,5
+way/986068924,Centro de Atención a la Salud T-III Jalalpa,ginecologia,14,1
+way/986068924,Centro de Atención a la Salud T-III Jalalpa,urgencias,10,9
+way/1364990384,,general,13,0
+way/1364990384,,cirugia,10,10
+way/1364990384,,oncologia,10,2
+way/1364990384,,radiologia,11,7
+way/1365216619,"Hospital Regional ""Lic. Adolfo López Mateos""",trauma,6,7
+way/1365216619,"Hospital Regional ""Lic. Adolfo López Mateos""",ortopedia,1,8
+way/1365216619,"Hospital Regional ""Lic. Adolfo López Mateos""",urgencias,13,4
+way/1365216619,"Hospital Regional ""Lic. Adolfo López Mateos""",cirugia,14,5
+way/1365266055,"Hospital Regional ""Lic. Adolfo López Mateos""",general,2,6
+way/1365266055,"Hospital Regional ""Lic. Adolfo López Mateos""",neurologia,4,10
+way/1365266055,"Hospital Regional ""Lic. Adolfo López Mateos""",cardiologia,15,3
+way/1365266055,"Hospital Regional ""Lic. Adolfo López Mateos""",intensivo,5,6
+node/2324519237,Hospital General Enrique Cabrera,pediatria,5,4
+node/2324519237,Hospital General Enrique Cabrera,general,7,4
+node/2324519237,Hospital General Enrique Cabrera,urgencias,5,9
+node/2324519237,Hospital General Enrique Cabrera,interno,5,4
+node/3977351148,,general,14,2
+node/3977351148,,ginecologia,6,7
+node/3977351148,,maternidad,1,1
+node/3977351148,,cirugia,1,8
+node/4403446355,Hospital vicentino y casa hogar,trauma,15,5
+node/4403446355,Hospital vicentino y casa hogar,urgencias,2,0
+node/4403446355,Hospital vicentino y casa hogar,radiologia,10,1
+node/4403446355,Hospital vicentino y casa hogar,intensivo,8,4
+node/9768668045,Hospital General Enrique Cabrera,general,5,1
+node/9768668045,Hospital General Enrique Cabrera,cardiologia,13,3
+node/9768668045,Hospital General Enrique Cabrera,oncologia,4,0
+node/9768668045,Hospital General Enrique Cabrera,neurologia,15,10

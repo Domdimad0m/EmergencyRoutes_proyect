@@ -1,0 +1,241 @@
+id_nodo,nombre_nodo,tipo,lat,lon,highway
+V0_0,Avenida Barranca del Muerto,vial,19.3628765,-99.189053,secondary
+V0_1,Avenida Barranca del Muerto,vial,19.3616742,-99.1857009,secondary
+V0_2,Avenida Barranca del Muerto,vial,19.3616943,-99.183757,secondary
+V1_0,Avenida Miguel Ángel de Quevedo,vial,19.3481336,-99.1845982,secondary
+V1_1,Avenida Miguel Ángel de Quevedo,vial,19.3472173,-99.1815869,secondary
+V1_2,Avenida Miguel Ángel de Quevedo,vial,19.3470455,-99.1810051,secondary
+V2_0,Avenida San Jerónimo,vial,19.3320826,-99.2074093,primary
+V2_1,Avenida San Jerónimo,vial,19.3320138,-99.2063726,primary
+V2_2,Avenida San Jerónimo,vial,19.3327026,-99.204932,primary
+V3_0,Avenida Paseo del Pedregal,vial,19.3089932,-99.2043419,secondary
+V3_1,Avenida Paseo del Pedregal,vial,19.3252052,-99.1990471,secondary
+V3_2,Avenida Paseo del Pedregal,vial,19.3338361,-99.1995951,secondary
+V4_0,Avenida Río Mixcoac,vial,19.3616759,-99.1743962,secondary
+V4_1,Avenida Río Mixcoac,vial,19.3602697,-99.1732545,secondary
+V4_2,Avenida Río Mixcoac,vial,19.3596126,-99.172181,secondary
+V5_0,Avenida Constituyentes,vial,19.3914788,-99.2387396,trunk
+V5_1,Avenida Constituyentes,vial,19.3921643,-99.2387602,trunk
+V5_2,Avenida Constituyentes,vial,19.3925736,-99.2387051,trunk
+V6_0,Avenida Insurgentes Sur,vial,19.3523755,-99.1858103,secondary
+V6_1,Avenida Insurgentes Sur,vial,19.353467,-99.1854647,secondary
+V6_2,Avenida Insurgentes Sur,vial,19.3546008,-99.1851038,secondary
+V7_0,Camino Real de Toluca,vial,19.3907577,-99.2016877,secondary
+V7_1,Camino Real de Toluca,vial,19.3932401,-99.1973511,secondary
+V7_2,Camino Real de Toluca,vial,19.3967688,-99.1912561,secondary
+V8_0,Avenida Jalisco,vial,19.3974297,-99.1900139,secondary
+V8_1,Avenida Jalisco,vial,19.3984041,-99.1894777,secondary
+V8_2,Avenida Jalisco,vial,19.4000031,-99.1885654,secondary
+V9_0,Anillo Periférico,vial,19.3995381,-99.1907978,motorway
+V9_1,Anillo Periférico,vial,19.399205,-99.1905979,motorway
+V9_2,Anillo Periférico,vial,19.3977882,-99.1900424,motorway
+V10_0,,vial,19.3995031,-99.1909337,motorway_link
+V10_1,,vial,19.3987572,-99.1905657,motorway_link
+V10_2,,vial,19.3978703,-99.1900764,motorway_link
+V11_0,Avenida Río de Tacubaya,vial,19.3986649,-99.195551,secondary
+V11_1,Avenida Río de Tacubaya,vial,19.3996416,-99.1936104,secondary
+V11_2,Avenida Río de Tacubaya,vial,19.3997856,-99.1923514,secondary
+V12_0,,vial,19.4000889,-99.1923469,motorway_link
+V12_1,,vial,19.3999412,-99.1922501,motorway_link
+V12_2,,vial,19.3998341,-99.1921179,motorway_link
+V13_0,Avenida Río de Tacubaya,vial,19.3998995,-99.191775,secondary
+V13_1,Avenida Río de Tacubaya,vial,19.4000354,-99.1924331,secondary
+V13_2,Avenida Río de Tacubaya,vial,19.4000481,-99.1927256,secondary
+V14_0,Boulevard Adolfo López Mateos,vial,19.3999755,-99.192609,secondary
+V14_1,Boulevard Adolfo López Mateos,vial,19.3999755,-99.192609,secondary
+V14_2,Boulevard Adolfo López Mateos,vial,19.3996747,-99.1926287,secondary
+V15_0,,vial,19.4015313,-99.1926386,secondary_link
+V15_1,,vial,19.4003516,-99.1927042,secondary_link
+V15_2,,vial,19.3999394,-99.1931844,secondary_link
+V16_0,,vial,19.3986649,-99.195551,secondary_link
+V16_1,,vial,19.3989128,-99.1956049,secondary_link
+V16_2,,vial,19.3990809,-99.1957322,secondary_link
+V17_0,,vial,19.3990703,-99.1955318,secondary_link
+V17_1,,vial,19.3989463,-99.1955191,secondary_link
+V17_2,,vial,19.3989001,-99.1954185,secondary_link
+V18_0,Anillo Periférico,vial,19.397436,-99.1898941,motorway
+V18_1,Anillo Periférico,vial,19.3935799,-99.1884321,motorway
+V18_2,Anillo Periférico,vial,19.3911998,-99.1891106,motorway
+V19_0,Avenida Prolongación San Antonio,vial,19.385027,-99.1912348,primary
+V19_1,Avenida Prolongación San Antonio,vial,19.3848766,-99.1927844,primary
+V19_2,Avenida Prolongación San Antonio,vial,19.3839616,-99.1951768,primary
+V20_0,,vial,19.3855619,-99.1908032,primary_link
+V20_1,,vial,19.3854567,-99.1912362,primary_link
+V20_2,,vial,19.3849608,-99.1921228,primary_link
+V21_0,Anillo Periférico,vial,19.3977882,-99.1900424,motorway
+V21_1,Anillo Periférico,vial,19.3977882,-99.1900424,motorway
+V21_2,Anillo Periférico,vial,19.397436,-99.1898941,motorway
+V22_0,Boulevard Adolfo López Mateos,vial,19.3976038,-99.1901688,secondary
+V22_1,Boulevard Adolfo López Mateos,vial,19.3976038,-99.1901688,secondary
+V22_2,Boulevard Adolfo López Mateos,vial,19.3973221,-99.1900326,secondary
+V23_0,Boulevard Adolfo López Mateos,vial,19.3973221,-99.1900326,secondary
+V23_1,Boulevard Adolfo López Mateos,vial,19.3911414,-99.1892183,secondary
+V23_2,Boulevard Adolfo López Mateos,vial,19.3849215,-99.1910736,secondary
+V24_0,,vial,19.3967159,-99.1897592,motorway_link
+V24_1,,vial,19.3965976,-99.1896363,motorway_link
+V24_2,,vial,19.3962938,-99.1894347,motorway_link
+V25_0,Circuito Interior Río Mixcoac,vial,19.3613447,-99.1740648,motorway
+V25_1,Circuito Interior Río Mixcoac,vial,19.3606427,-99.1734665,motorway
+V25_2,Circuito Interior Río Mixcoac,vial,19.3603855,-99.173188,motorway
+V26_0,Carretera México - Toluca (Cuota),vial,19.3662121,-99.2665959,motorway
+V26_1,Carretera México - Toluca (Cuota),vial,19.3666833,-99.2666741,motorway
+V26_2,Carretera México - Toluca (Cuota),vial,19.366954,-99.2667076,motorway
+V27_0,Carretera México - Toluca (Cuota),vial,19.3655371,-99.2664844,motorway
+V27_1,Carretera México - Toluca (Cuota),vial,19.3655371,-99.2664844,motorway
+V27_2,Carretera México - Toluca (Cuota),vial,19.3662121,-99.2665959,motorway
+V28_0,Carretera México - Toluca (Cuota),vial,19.3787947,-99.2535993,motorway
+V28_1,Carretera México - Toluca (Cuota),vial,19.379429,-99.2526303,motorway
+V28_2,Carretera México - Toluca (Cuota),vial,19.3830376,-99.2474181,motorway
+V29_0,Carretera México - Toluca (Cuota),vial,19.3745158,-99.2610543,motorway
+V29_1,Carretera México - Toluca (Cuota),vial,19.3745158,-99.2610543,motorway
+V29_2,Carretera México - Toluca (Cuota),vial,19.3748918,-99.2605401,motorway
+V30_0,Boulevard Reforma,vial,19.3872755,-99.2428895,motorway
+V30_1,Boulevard Reforma,vial,19.3871113,-99.2431957,motorway
+V30_2,Boulevard Reforma,vial,19.3867433,-99.2434929,motorway
+V31_0,Boulevard Reforma,vial,19.3846882,-99.2447567,motorway
+V31_1,Boulevard Reforma,vial,19.384287,-99.2456779,motorway
+V31_2,Boulevard Reforma,vial,19.3829781,-99.247765,motorway
+V32_0,,vial,19.3797447,-99.2491786,motorway_link
+V32_1,,vial,19.3792211,-99.2491633,motorway_link
+V32_2,,vial,19.3788079,-99.2489315,motorway_link
+V33_0,,vial,19.3829781,-99.247765,motorway_link
+V33_1,,vial,19.3829781,-99.247765,motorway_link
+V33_2,,vial,19.3823168,-99.2492933,motorway_link
+V34_0,,vial,19.3809065,-99.2509529,motorway_link
+V34_1,,vial,19.3806386,-99.2506422,motorway_link
+V34_2,,vial,19.3803952,-99.2495981,motorway_link
+V35_0,Prolongación Paseo de la Reforma,vial,19.3787153,-99.254357,secondary
+V35_1,Prolongación Paseo de la Reforma,vial,19.3763752,-99.2590411,secondary
+V35_2,Prolongación Paseo de la Reforma,vial,19.3753892,-99.2605769,secondary
+V36_0,Carretera México - Toluca (Cuota),vial,19.3747386,-99.2612025,motorway
+V36_1,Carretera México - Toluca (Cuota),vial,19.3737931,-99.2632705,motorway
+V36_2,Carretera México - Toluca (Cuota),vial,19.3707556,-99.2656712,motorway
+V37_0,Carretera México - Toluca (Cuota),vial,19.3750754,-99.2606229,motorway
+V37_1,Carretera México - Toluca (Cuota),vial,19.3748713,-99.2609389,motorway
+V37_2,Carretera México - Toluca (Cuota),vial,19.3747386,-99.2612025,motorway
+V38_0,Prolongación Paseo de la Reforma,vial,19.3655949,-99.2663355,secondary
+V38_1,Prolongación Paseo de la Reforma,vial,19.3655949,-99.2663355,secondary
+V38_2,Prolongación Paseo de la Reforma,vial,19.366238,-99.2664474,secondary
+V39_0,Prolongación Paseo de la Reforma,vial,19.376231,-99.2584133,secondary
+V39_1,Prolongación Paseo de la Reforma,vial,19.3794818,-99.2518459,secondary
+V39_2,Prolongación Paseo de la Reforma,vial,19.3820572,-99.2486967,secondary
+V40_0,,vial,19.3667728,-99.264762,secondary_link
+V40_1,,vial,19.3665715,-99.2659488,secondary_link
+V40_2,,vial,19.3681708,-99.266334,secondary_link
+V41_0,Carretera México - Toluca (Cuota),vial,19.3674479,-99.2667142,motorway
+V41_1,Carretera México - Toluca (Cuota),vial,19.3682896,-99.2665164,motorway
+V41_2,Carretera México - Toluca (Cuota),vial,19.3714,-99.2651827,motorway
+V42_0,Carretera México - Toluca (Cuota),vial,19.366954,-99.2667076,motorway
+V42_1,Carretera México - Toluca (Cuota),vial,19.3671802,-99.2667206,motorway
+V42_2,Carretera México - Toluca (Cuota),vial,19.3674479,-99.2667142,motorway
+V43_0,,vial,19.3669889,-99.2665637,secondary_link
+V43_1,,vial,19.3671476,-99.2668699,secondary_link
+V43_2,,vial,19.3669,-99.2671163,secondary_link
+V44_0,,vial,19.3679545,-99.2671937,secondary_link
+V44_1,,vial,19.3672511,-99.2669987,secondary_link
+V44_2,,vial,19.3674894,-99.2665439,secondary_link
+V45_0,,vial,19.3783784,-99.2488546,secondary
+V45_1,,vial,19.3782512,-99.2483859,secondary
+V45_2,,vial,19.3786619,-99.2480713,secondary
+V46_0,Avenida Paseo de la Reforma,vial,19.3914788,-99.2387396,secondary
+V46_1,Avenida Paseo de la Reforma,vial,19.3917603,-99.2388093,secondary
+V46_2,Avenida Paseo de la Reforma,vial,19.3919922,-99.2388966,secondary
+V47_0,,vial,19.3929684,-99.2386153,trunk_link
+V47_1,,vial,19.3933317,-99.2380921,trunk_link
+V47_2,,vial,19.3933922,-99.2379055,trunk_link
+V48_0,Circuito Interior Campo Militar 1F,vial,19.3916049,-99.238649,primary_link
+V48_1,Circuito Interior Campo Militar 1F,vial,19.391511,-99.2382526,primary_link
+V48_2,Circuito Interior Campo Militar 1F,vial,19.3912344,-99.2376698,primary_link
+V49_0,,vial,19.4133294,-99.1215561,primary_link
+V49_1,,vial,19.4134868,-99.1213403,primary_link
+V49_2,,vial,19.41376,-99.1212643,primary_link
+V50_0,Anillo Periférico,vial,19.3630048,-99.1911,motorway
+V50_1,Anillo Periférico,vial,19.3630048,-99.1911,motorway
+V50_2,Anillo Periférico,vial,19.3638742,-99.190989,motorway
+V51_0,Anillo Periférico,vial,19.3444757,-99.2024303,motorway
+V51_1,Anillo Periférico,vial,19.346169,-99.2021506,motorway
+V51_2,Anillo Periférico,vial,19.3503758,-99.200979,motorway
+V52_0,Anillo Periférico,vial,19.3315639,-99.2101793,motorway
+V52_1,Anillo Periférico,vial,19.3371237,-99.2054473,motorway
+V52_2,Anillo Periférico,vial,19.340322,-99.203045,motorway
+V53_0,Anillo Periférico,vial,19.3406519,-99.2029205,motorway
+V53_1,Anillo Periférico,vial,19.3415905,-99.2027054,motorway
+V53_2,Anillo Periférico,vial,19.3444757,-99.2024303,motorway
+V54_0,Anillo Periférico,vial,19.3307311,-99.2105579,motorway
+V54_1,Anillo Periférico,vial,19.3307311,-99.2105579,motorway
+V54_2,Anillo Periférico,vial,19.3315639,-99.2101793,motorway
+V55_0,Anillo Periférico,vial,19.3403358,-99.203167,motorway
+V55_1,Anillo Periférico,vial,19.338513,-99.2041903,motorway
+V55_2,Anillo Periférico,vial,19.3354009,-99.2077487,motorway
+V56_0,Anillo Periférico,vial,19.3503856,-99.2010695,motorway
+V56_1,Anillo Periférico,vial,19.3458551,-99.2023547,motorway
+V56_2,Anillo Periférico,vial,19.3444783,-99.2025571,motorway
+V57_0,Anillo Periférico,vial,19.3575261,-99.1959434,motorway
+V57_1,Anillo Periférico,vial,19.3565802,-99.198381,motorway
+V57_2,Anillo Periférico,vial,19.3550873,-99.1995945,motorway
+V58_0,Anillo Periférico,vial,19.3638717,-99.1910976,motorway
+V58_1,Anillo Periférico,vial,19.3638717,-99.1910976,motorway
+V58_2,Anillo Periférico,vial,19.3630171,-99.1912112,motorway
+V59_0,Anillo Periférico,vial,19.3723542,-99.1918489,motorway
+V59_1,Anillo Periférico,vial,19.3714948,-99.1916472,motorway
+V59_2,Anillo Periférico,vial,19.3690545,-99.1917703,motorway
+V60_0,,vial,19.3878703,-99.1899752,motorway_link
+V60_1,,vial,19.387702,-99.1900816,motorway_link
+V60_2,,vial,19.3875323,-99.1901881,motorway_link
+V61_0,Anillo Periférico,vial,19.3727207,-99.1920217,motorway
+V61_1,Anillo Periférico,vial,19.3727207,-99.1920217,motorway
+V61_2,Anillo Periférico,vial,19.3723542,-99.1918489,motorway
+V62_0,Boulevard Adolfo López Mateos,vial,19.3726309,-99.1921756,secondary
+V62_1,Boulevard Adolfo López Mateos,vial,19.3726309,-99.1921756,secondary
+V62_2,Boulevard Adolfo López Mateos,vial,19.3723431,-99.19204,secondary
+V63_0,Calle Rosa Trepadora,vial,19.3721378,-99.1933175,secondary
+V63_1,Calle Rosa Trepadora,vial,19.3720641,-99.1929082,secondary
+V63_2,Calle Rosa Trepadora,vial,19.3719172,-99.1919188,secondary
+V64_0,,vial,19.3576409,-99.1960534,motorway_link
+V64_1,,vial,19.3576409,-99.1960534,motorway_link
+V64_2,,vial,19.3574369,-99.1961833,motorway_link
+V65_0,,vial,19.3546735,-99.199707,motorway_link
+V65_1,,vial,19.3559134,-99.1990764,motorway_link
+V65_2,,vial,19.3560766,-99.199407,motorway_link
+V66_0,,vial,19.3560766,-99.199407,motorway_link
+V66_1,,vial,19.3559406,-99.199875,motorway_link
+V66_2,,vial,19.3557793,-99.2008538,motorway_link
+V67_0,,vial,19.3584517,-99.1941816,motorway_link
+V67_1,,vial,19.3584517,-99.1941816,motorway_link
+V67_2,,vial,19.3591922,-99.1935337,motorway_link
+V68_0,Autopista Urbana Norte,vial,19.3849143,-99.1910367,motorway
+V68_1,Autopista Urbana Norte,vial,19.3830089,-99.1918123,motorway
+V68_2,Autopista Urbana Norte,vial,19.3802963,-99.1918469,motorway
+V69_0,,vial,19.3567959,-99.1982317,motorway_link
+V69_1,,vial,19.3557793,-99.2008538,motorway_link
+V69_2,,vial,19.353648,-99.2033752,motorway_link
+V70_0,,vial,19.356542,-99.1987634,secondary_link
+V70_1,,vial,19.3565692,-99.1988654,secondary_link
+V70_2,,vial,19.3566443,-99.1989055,secondary_link
+V71_0,,vial,19.3493267,-99.2014927,secondary_link
+V71_1,,vial,19.3493267,-99.2014927,secondary_link
+V71_2,,vial,19.3493128,-99.2013958,secondary_link
+V72_0,,vial,19.34884,-99.2012113,secondary_link
+V72_1,,vial,19.34884,-99.2012113,secondary_link
+V72_2,,vial,19.3489535,-99.201239,secondary_link
+V73_0,Avenida Santa Catarina,vial,19.3492694,-99.199968,secondary
+V73_1,Avenida Santa Catarina,vial,19.3494096,-99.2005147,secondary
+V73_2,Avenida Santa Catarina,vial,19.349214,-99.2011598,secondary
+V74_0,Periférico Segundo Piso,vial,19.3555123,-99.1993694,motorway
+V74_1,Periférico Segundo Piso,vial,19.3666976,-99.1905999,motorway
+V74_2,Periférico Segundo Piso,vial,19.3800827,-99.1916666,motorway
+V75_0,,vial,19.3483364,-99.2013596,secondary_link
+V75_1,,vial,19.3491883,-99.2007502,secondary_link
+V75_2,,vial,19.3492694,-99.199968,secondary_link
+V76_0,,vial,19.3473837,-99.2021419,secondary_link
+V76_1,,vial,19.3473837,-99.2021419,secondary_link
+V76_2,,vial,19.3473915,-99.2020767,secondary_link
+V77_0,Camino al Desierto de los Leones,vial,19.3476106,-99.2020715,secondary
+V77_1,Camino al Desierto de los Leones,vial,19.3471775,-99.2026082,secondary
+V77_2,Camino al Desierto de los Leones,vial,19.3470762,-99.2029812,secondary
+V78_0,Avenida Querétaro,vial,19.3365504,-99.2083694,secondary
+V78_1,Avenida Querétaro,vial,19.3373472,-99.2078391,secondary
+V78_2,Avenida Querétaro,vial,19.3382994,-99.206716,secondary
+V79_0,Boulevard Adolfo Ruiz Cortines,vial,19.3123076,-99.2198089,secondary
+V79_1,Boulevard Adolfo Ruiz Cortines,vial,19.3130491,-99.2201938,secondary
+V79_2,Boulevard Adolfo Ruiz Cortines,vial,19.3134249,-99.2203055,secondary
