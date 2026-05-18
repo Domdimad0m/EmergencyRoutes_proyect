@@ -2,6 +2,10 @@
 
 import matplotlib.pyplot as plt
 import networkx as nx
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import contextily as ctx
+from shapely.geometry import LineString
 
 
 def visualizar_grafo_completo(rutas_completas):
@@ -537,5 +541,71 @@ def visualizar_grafo_trafico_por_hora(
         f"Grafo con tráfico - Hora {hora:02d}:00"
     )
 
+
+    plt.show()
+
+
+def visualizar_ruta_en_mapa_si(resultado, nodos_viales, hospitales=None):
+
+    ruta = resultado["ruta"]
+
+    nodos_ruta = nodos_viales[
+        nodos_viales["id_nodo"].isin(ruta)
+    ].copy()
+
+    nodos_ruta["orden"] = nodos_ruta["id_nodo"].apply(
+        lambda x: ruta.index(x)
+    )
+
+    nodos_ruta = nodos_ruta.sort_values("orden")
+
+    gdf_puntos = gpd.GeoDataFrame(
+        nodos_ruta,
+        geometry=gpd.points_from_xy(
+            nodos_ruta["longitud"],
+            nodos_ruta["latitud"]
+        ),
+        crs="EPSG:4326"
+    )
+
+    linea = LineString(gdf_puntos.geometry.tolist())
+
+    gdf_linea = gpd.GeoDataFrame(
+        {"tipo": ["ruta"]},
+        geometry=[linea],
+        crs="EPSG:4326"
+    )
+
+    gdf_puntos = gdf_puntos.to_crs(epsg=3857)
+    gdf_linea = gdf_linea.to_crs(epsg=3857)
+
+    fig, ax = plt.subplots(figsize=(12, 12))
+
+    gdf_linea.plot(
+        ax=ax,
+        linewidth=4,
+        color="red",
+        zorder=3
+    )
+
+    gdf_puntos.plot(
+        ax=ax,
+        markersize=35,
+        color="yellow",
+        edgecolor="black",
+        zorder=4
+    )
+
+    xmin, ymin, xmax, ymax = gdf_linea.total_bounds
+    ax.set_xlim(xmin - 1000, xmax + 1000)
+    ax.set_ylim(ymin - 1000, ymax + 1000)
+
+    ctx.add_basemap(
+        ax,
+        source=ctx.providers.CartoDB.Positron
+    )
+
+    ax.set_axis_off()
+    ax.set_title("Ruta óptima sobre mapa real", fontsize=15)
 
     plt.show()
