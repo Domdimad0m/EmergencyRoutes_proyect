@@ -32,6 +32,70 @@ def distancia_km(lat1, lon1, lat2, lon2):
     return R * c
 
 
+# Genera 24 pesos por hora para simular tráfico durante el día.
+def generar_pesos_por_hora(
+    distancia,
+    highway=None,
+):
+    """
+    Genera 24 pesos por hora para simular tráfico durante el día.
+
+    Cada peso representa el costo de recorrer una arista en una hora específica.
+    El costo base es la distancia y se multiplica por un factor de tráfico.
+
+    El patrón de tráfico depende del tipo de vialidad.
+    """
+
+    if highway == "motorway":
+        factores_trafico = [
+            1.2, 1.2, 1.1, 1.1,
+            1.3, 1.5, 1.8, 2.0,
+            2.0, 1.8, 1.5, 1.4,
+            1.5, 1.6, 1.7, 1.9,
+            2.0, 2.0, 1.9, 1.7,
+            1.5, 1.4, 1.3, 1.2,
+        ]
+
+    elif highway == "primary":
+        factores_trafico = [
+            1.1, 1.1, 1.1, 1.1,
+            1.2, 1.3, 1.6, 1.8,
+            1.7, 1.5, 1.3, 1.2,
+            1.3, 1.4, 1.5, 1.7,
+            1.9, 2.0, 1.8, 1.6,
+            1.4, 1.3, 1.2, 1.1,
+        ]
+
+    elif highway == "secondary":
+        factores_trafico = [
+            1.0, 1.0, 1.0, 1.0,
+            1.1, 1.2, 1.4, 1.6,
+            1.5, 1.3, 1.2, 1.1,
+            1.2, 1.3, 1.4, 1.5,
+            1.7, 1.8, 1.6, 1.4,
+            1.2, 1.1, 1.1, 1.0,
+        ]
+
+    else:
+        factores_trafico = [
+            1.0, 1.0, 1.0, 1.0,
+            1.0, 1.1, 1.2, 1.3,
+            1.3, 1.2, 1.1, 1.1,
+            1.1, 1.2, 1.2, 1.3,
+            1.4, 1.5, 1.4, 1.3,
+            1.2, 1.1, 1.0, 1.0,
+        ]
+
+    pesos_por_hora = []
+
+    for factor in factores_trafico:
+        pesos_por_hora.append(
+            round(distancia * factor, 3)
+        )
+
+    return pesos_por_hora
+
+
 def cargar_hospitales(path_hospitales):
     gdf = gpd.read_file(path_hospitales)
     return gdf
@@ -204,15 +268,23 @@ def generar_nodos_y_rutas_viales(vias):
                 nodo_b["lon"],
             )
 
-            rutas.append(
-                {
-                    "origen": a,
-                    "destino": b,
-                    "distancia_km": round(d, 3),
-                    "factor_trafico": 1.0,
-                    "peso": round(d, 3),
-                }
+            pesos_por_hora = generar_pesos_por_hora(
+                d,
+                row.get("highway"),
             )
+
+            fila_ruta = {
+                "origen": a,
+                "destino": b,
+                "distancia_km": round(d, 3),
+                "factor_trafico": 1.0,
+                "peso": round(d, 3),
+            }
+
+            for hora in range(24):
+                fila_ruta[f"peso_h{hora:02d}"] = pesos_por_hora[hora]
+
+            rutas.append(fila_ruta)
 
     nodos_viales = pd.DataFrame(nodos)
     rutas_viales = pd.DataFrame(rutas)

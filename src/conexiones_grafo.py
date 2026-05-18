@@ -2,6 +2,7 @@ import pandas as pd
 from math import radians, sin, cos, sqrt, atan2
 
 # Función para calcular distancia entre coordenadas (considerando Harvine pues no estamos sobre un plano)
+
 def distancia_km(lat1, lon1, lat2, lon2):
     R = 6371
     dlat = radians(lat2 - lat1)
@@ -11,6 +12,71 @@ def distancia_km(lat1, lon1, lat2, lon2):
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
     return R * c
+
+# Genera una lista de pesos para cada hora del día, dado una distancia base
+def generar_pesos_por_hora(
+    distancia,
+    highway=None,
+):
+    if highway == "motorway":
+        factores_trafico = [
+            1.2, 1.2, 1.1, 1.1,
+            1.3, 1.5, 1.8, 2.0,
+            2.0, 1.8, 1.5, 1.4,
+            1.5, 1.6, 1.7, 1.9,
+            2.0, 2.0, 1.9, 1.7,
+            1.5, 1.4, 1.3, 1.2,
+        ]
+
+    elif highway == "primary":
+        factores_trafico = [
+            1.1, 1.1, 1.1, 1.1,
+            1.2, 1.3, 1.6, 1.8,
+            1.7, 1.5, 1.3, 1.2,
+            1.3, 1.4, 1.5, 1.7,
+            1.9, 2.0, 1.8, 1.6,
+            1.4, 1.3, 1.2, 1.1,
+        ]
+
+    elif highway == "secondary":
+        factores_trafico = [
+            1.0, 1.0, 1.0, 1.0,
+            1.1, 1.2, 1.4, 1.6,
+            1.5, 1.3, 1.2, 1.1,
+            1.2, 1.3, 1.4, 1.5,
+            1.7, 1.8, 1.6, 1.4,
+            1.2, 1.1, 1.1, 1.0,
+        ]
+
+    else:
+        factores_trafico = [
+            1.0, 1.0, 1.0, 1.0,
+            1.0, 1.1, 1.2, 1.3,
+            1.3, 1.2, 1.1, 1.1,
+            1.1, 1.2, 1.2, 1.3,
+            1.4, 1.5, 1.4, 1.3,
+            1.2, 1.1, 1.0, 1.0,
+        ]
+
+    pesos_por_hora = []
+
+    for factor in factores_trafico:
+        pesos_por_hora.append(
+            round(distancia * factor, 3)
+        )
+
+    return pesos_por_hora
+
+
+def obtener_highway_nodo(nodos_viales, id_nodo):
+    coincidencias = nodos_viales[
+        nodos_viales["id_nodo"] == id_nodo
+    ]
+
+    if coincidencias.empty:
+        return None
+
+    return coincidencias.iloc[0].get("highway")
 
 def cargar_datos_conexiones(
     hospitales_path="datos/hospitales_limpio.csv",
@@ -43,16 +109,29 @@ def conectar_hospitales_a_vialidades(hospitales, nodos_viales, k=3):
         cercanos = sorted(distancias, key=lambda x: x[1])[:k]
 
         for id_nodo, d in cercanos:
-            conexiones_hospitales.append(
-                {
-                    "origen": hospital["id_osm"],
-                    "destino": id_nodo,
-                    "distancia_km": round(d, 3),
-                    "factor_trafico": 1.0,
-                    "peso": round(d, 3),
-                    "tipo_ruta": "hospital-vial",
-                }
+            highway = obtener_highway_nodo(
+                nodos_viales,
+                id_nodo,
             )
+
+            pesos_por_hora = generar_pesos_por_hora(
+                d,
+                highway,
+            )
+
+            fila_ruta = {
+                "origen": hospital["id_osm"],
+                "destino": id_nodo,
+                "distancia_km": round(d, 3),
+                "factor_trafico": 1.0,
+                "peso": round(d, 3),
+                "tipo_ruta": "hospital-vial",
+            }
+
+            for hora in range(24):
+                fila_ruta[f"peso_h{hora:02d}"] = pesos_por_hora[hora]
+
+            conexiones_hospitales.append(fila_ruta)
 
     conexiones_hospitales = pd.DataFrame(conexiones_hospitales)
 
@@ -77,16 +156,26 @@ def conectar_nodos_viales_cercanos(nodos_viales, k=8):
         cercanos = sorted(distancias, key=lambda x: x[1])[:k]
 
         for id_destino, d in cercanos:
-            nuevas_rutas.append(
-                {
-                    "origen": origen["id_nodo"],
-                    "destino": id_destino,
-                    "distancia_km": round(d, 3),
-                    "factor_trafico": 1.0,
-                    "peso": round(d, 3),
-                    "tipo_ruta": "conexion-vial-cercana",
-                }
+            highway = origen.get("highway")
+
+            pesos_por_hora = generar_pesos_por_hora(
+                d,
+                highway,
             )
+
+            fila_ruta = {
+                "origen": origen["id_nodo"],
+                "destino": id_destino,
+                "distancia_km": round(d, 3),
+                "factor_trafico": 1.0,
+                "peso": round(d, 3),
+                "tipo_ruta": "conexion-vial-cercana",
+            }
+
+            for hora in range(24):
+                fila_ruta[f"peso_h{hora:02d}"] = pesos_por_hora[hora]
+
+            nuevas_rutas.append(fila_ruta)
 
     rutas_extra = pd.DataFrame(nuevas_rutas)
 
@@ -126,7 +215,7 @@ def ejecutar_conexiones(
     rutas_viales_path="datos/rutas_viales.csv",
     output_dir="datos",
     k_hospitales=3,
-    k_viales=8,
+    k_viales=50,
 ):
 
     hospitales, nodos_viales, rutas_viales = cargar_datos_conexiones(

@@ -8,9 +8,17 @@ import numpy as np
 from grafo import MinHeap, NodoHeap
 
 
-def dijkstra_costo(grafo, nodo_origen):
+def dijkstra_costo(grafo, nodo_origen, hora=None):
 
     origenes = grafo.getOrigen()
+
+    if hora is not None:
+        if hora < 0 or hora > 23:
+            raise ValueError("La hora debe estar entre 0 y 23")
+
+        columna_hora = f"peso_h{hora:02d}"
+    else:
+        columna_hora = None
 
     if nodo_origen not in origenes:
         raise KeyError(
@@ -47,7 +55,10 @@ def dijkstra_costo(grafo, nodo_origen):
 
         for vecino, peso in origenes[u].items():
 
-            costo_arista = peso["costo"]
+            if columna_hora is not None and columna_hora in peso:
+                costo_arista = peso[columna_hora]
+            else:
+                costo_arista = peso["costo"]
 
             if (
                 not visitado[vecino]
@@ -130,7 +141,8 @@ def filtrar_hospitales_candidatos(
 def buscar_hospital_adecuado(
     grafo,
     emergencia,
-    capacidades
+    capacidades,
+    hora=None,
 ):
 
     especialidad = emergencia[
@@ -152,6 +164,7 @@ def buscar_hospital_adecuado(
     padre, distancias = dijkstra_costo(
         grafo,
         nodo_origen,
+        hora=hora,
     )
 
     mejor_hospital = None
@@ -203,6 +216,9 @@ def buscar_hospital_adecuado(
 
         "costo_ruta":
             mejor_distancia,
+
+        "hora":
+            hora,
 
         "ruta":
             ruta,

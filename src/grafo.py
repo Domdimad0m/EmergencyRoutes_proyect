@@ -159,6 +159,12 @@ def construir_grafo_desde_rutas(rutas):
             "costo": ruta["peso"],
         }
 
+        for hora in range(24):
+            columna_hora = f"peso_h{hora:02d}"
+
+            if columna_hora in rutas.columns:
+                peso[columna_hora] = ruta[columna_hora]
+
         grafo.inserta_no_dirigido(
             ruta["origen"],
             ruta["destino"],

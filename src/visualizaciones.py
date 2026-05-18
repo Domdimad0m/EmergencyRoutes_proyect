@@ -30,39 +30,133 @@ def visualizar_grafo_completo(rutas_completas):
     plt.show()
 
 
-def visualizar_ruta_dijkstra(resultado):
+def visualizar_ruta_dijkstra(
+    resultado,
+    grafo=None,
+    nodos_viales=None,
+    hospitales=None,
+    hora=None,
+):
     if resultado is None:
         print("No se puede visualizar la ruta porque no hay resultado.")
         return
 
-    G = nx.Graph()
-
     ruta = resultado["ruta"]
 
+    G = nx.Graph()
+
     for i in range(len(ruta) - 1):
-        G.add_edge(
-            ruta[i],
-            ruta[i + 1],
+        origen = ruta[i]
+        destino = ruta[i + 1]
+
+        peso_arista = None
+
+        if grafo is not None:
+            datos_grafo = grafo.getOrigen()
+
+            if origen in datos_grafo and destino in datos_grafo[origen]:
+                peso = datos_grafo[origen][destino]
+
+                if hora is not None:
+                    columna_hora = f"peso_h{hora:02d}"
+
+                    if columna_hora in peso:
+                        peso_arista = peso[columna_hora]
+                    else:
+                        peso_arista = peso["costo"]
+                else:
+                    peso_arista = peso["costo"]
+
+        if peso_arista is None:
+            G.add_edge(origen, destino)
+        else:
+            G.add_edge(
+                origen,
+                destino,
+                weight=round(peso_arista, 2),
+            )
+
+    posiciones = {}
+    etiquetas = {}
+
+    if nodos_viales is not None:
+        for _, row in nodos_viales.iterrows():
+            id_nodo = row["id_nodo"]
+
+            if id_nodo in ruta:
+                posiciones[id_nodo] = (
+                    row["lon"],
+                    row["lat"],
+                )
+                etiquetas[id_nodo] = id_nodo
+
+    if hospitales is not None:
+        for _, row in hospitales.iterrows():
+            id_hospital = row["id_osm"]
+
+            if id_hospital in ruta:
+                posiciones[id_hospital] = (
+                    row["lon"],
+                    row["lat"],
+                )
+                etiquetas[id_hospital] = row["nombre"]
+
+    usar_posiciones_reales = all(
+        nodo in posiciones
+        for nodo in ruta
+    )
+
+    if usar_posiciones_reales:
+        pos = posiciones
+    else:
+        pos = nx.spring_layout(
+            G,
+            seed=42,
         )
+        etiquetas = {
+            nodo: nodo
+            for nodo in G.nodes()
+        }
 
-    plt.figure(figsize=(10, 8))
-
-    pos = nx.spring_layout(G, seed=42)
+    plt.figure(figsize=(12, 8))
 
     nx.draw(
         G,
         pos,
-        with_labels=True,
+        with_labels=False,
         node_color="lightblue",
         edge_color="red",
-        node_size=1000,
+        node_size=800,
         font_size=8,
     )
 
-    plt.title(
-        f'Ruta óptima hacia {resultado["hospital"]}'
+    nx.draw_networkx_labels(
+        G,
+        pos,
+        labels=etiquetas,
+        font_size=8,
     )
 
+    edge_labels = nx.get_edge_attributes(
+        G,
+        "weight",
+    )
+
+    nx.draw_networkx_edge_labels(
+        G,
+        pos,
+        edge_labels=edge_labels,
+        font_size=7,
+    )
+
+    titulo = f'Ruta óptima hacia {resultado["hospital"]}'
+
+    if hora is not None:
+        titulo += f" - Hora {hora:02d}:00"
+
+    plt.title(titulo)
+    plt.xlabel("Longitud")
+    plt.ylabel("Latitud")
     plt.show()
 
 
@@ -145,7 +239,7 @@ def visualizar_hospitales_cercanos(
 
 
 def imprimir_resultado_dijkstra(resultado):
-    print("\n===== RESULTADO DIJKSTRA =====")
+    print("\nRESULTADO DIJKSTRA:")
 
     if resultado is None:
         print("No se encontró hospital adecuado")
@@ -171,7 +265,7 @@ def imprimir_resultado_dijkstra(resultado):
 
 
 def imprimir_resultado_prim(resultado_prim):
-    print("\n===== RESULTADO PRIM =====")
+    print("\nRESULTADO PRIM:")
 
     print(
         f'Costo total MST: '
@@ -181,8 +275,10 @@ def imprimir_resultado_prim(resultado_prim):
     print("\nAristas MST:")
     print(resultado_prim["aristas_mst"])
 
+
 def visualizar_grafo_rutas_hospitalarias(grafo):
     G = nx.Graph()
+
     for origen in grafo.getOrigen():
         for destino, peso in grafo.getOrigen()[origen].items():
             G.add_edge(
@@ -191,9 +287,11 @@ def visualizar_grafo_rutas_hospitalarias(grafo):
                 weight=round(
                     peso["costo"],
                     2,
-                )
+                ),
             )
+
     plt.figure(figsize=(14, 10))
+
     pos = nx.spring_layout(
         G,
         seed=42,
@@ -218,8 +316,10 @@ def visualizar_grafo_rutas_hospitalarias(grafo):
         edge_labels=labels,
         font_size=7,
     )
+
     plt.title("Grafo de rutas hospitalarias")
     plt.show()
+
 
 def visualizar_grafo_hospitales_completo(grafo_hospitales, hospitales):
     G_hospitales = nx.Graph()
@@ -289,6 +389,7 @@ def visualizar_grafo_hospitales_completo(grafo_hospitales, hospitales):
     plt.ylabel("Latitud")
     plt.show()
 
+
 def visualizar_mst_geografico(
     padre,
     llave,
@@ -299,7 +400,6 @@ def visualizar_mst_geografico(
     posiciones = {}
 
     for _, row in hospitales.iterrows():
-
         id_hospital = row["id_osm"]
 
         posiciones[id_hospital] = (
@@ -313,9 +413,7 @@ def visualizar_mst_geografico(
         )
 
     for hijo, papa in padre.items():
-
         if papa is not None:
-
             costo = llave[hijo]
 
             G_mst.add_edge(
@@ -366,5 +464,78 @@ def visualizar_mst_geografico(
 
     plt.xlabel("Longitud")
     plt.ylabel("Latitud")
+
+    plt.show()
+
+
+def visualizar_grafo_trafico_por_hora(
+    grafo,
+    hora,
+    nodos_viales=None,
+    hospitales=None,
+    mostrar_pesos=False,
+):
+    if hora < 0 or hora > 23:
+        raise ValueError(
+            "La hora debe estar entre 0 y 23"
+        )
+
+    columna_hora = f"peso_h{hora:02d}"
+
+    G = nx.Graph()
+
+    for origen in grafo.getOrigen():
+        for destino, peso in grafo.getOrigen()[origen].items():
+            if columna_hora in peso:
+                costo = peso[columna_hora]
+            else:
+                costo = peso["costo"]
+
+            G.add_edge(
+                origen,
+                destino,
+                weight=round(costo, 2),
+            )
+
+    pos = nx.spring_layout(
+        G,
+        seed=42,
+        k=0.35,
+        iterations=100,
+    )
+
+    plt.figure(figsize=(14, 10))
+
+    nx.draw(
+        G,
+        pos,
+        with_labels=True,
+        node_size=350,
+        font_size=7,
+        width=0.6,
+    )
+
+    if mostrar_pesos:
+        for origen, destino, datos_arista in G.edges(data=True):
+            if origen in pos and destino in pos:
+                x1, y1 = pos[origen]
+                x2, y2 = pos[destino]
+
+                x_medio = (x1 + x2) / 2
+                y_medio = (y1 + y2) / 2
+
+                plt.text(
+                    x_medio,
+                    y_medio,
+                    str(datos_arista["weight"]),
+                    fontsize=6,
+                    ha="center",
+                    va="center",
+                )
+
+    plt.title(
+        f"Grafo con tráfico - Hora {hora:02d}:00"
+    )
+
 
     plt.show()
