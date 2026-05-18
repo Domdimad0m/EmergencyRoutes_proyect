@@ -559,11 +559,31 @@ def visualizar_ruta_en_mapa_si(resultado, nodos_viales, hospitales=None):
 
     nodos_ruta = nodos_ruta.sort_values("orden")
 
+    # detectar nombres de columnas para longitud/latitud (soporta varias variantes)
+    lon_col = None
+    lat_col = None
+
+    for cand in ("lon", "longitud", "lng", "long"):
+        if cand in nodos_ruta.columns:
+            lon_col = cand
+            break
+
+    for cand in ("lat", "latitud", "latitude"):
+        if cand in nodos_ruta.columns:
+            lat_col = cand
+            break
+
+    if lon_col is None or lat_col is None:
+        raise KeyError(
+            "No se encontraron columnas de longitud/latitud en 'nodos_viales'. "
+            "Buscadas: lon/lat/longitud/latitud (asegurese de que el DataFrame tenga estas columnas)."
+        )
+
     gdf_puntos = gpd.GeoDataFrame(
         nodos_ruta,
         geometry=gpd.points_from_xy(
-            nodos_ruta["longitud"],
-            nodos_ruta["latitud"]
+            nodos_ruta[lon_col],
+            nodos_ruta[lat_col]
         ),
         crs="EPSG:4326"
     )
