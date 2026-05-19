@@ -41,6 +41,7 @@ class MaxHeapEmergencias:
     def __init__(self):
         self.elementos = []
         self.contador_llegada = 0
+        self.emergencia_atendida = None
 
     def estaVacio(self):
         return len(self.elementos) == 0
@@ -82,6 +83,8 @@ class MaxHeapEmergencias:
         if not self.estaVacio():
             self.elementos[0] = ultimo
             self.reordenar_abajo(0)
+
+        self.emergencia_atendida = maximo.emergencia
 
         return maximo.emergencia
 
@@ -125,6 +128,12 @@ class MaxHeapEmergencias:
 
         return self.elementos[0].emergencia
 
+    def atender_y_obtener_siguiente(self):
+        emergencia_atendida = self.emergencia_atendida
+        siguiente_emergencia = self.ver_siguiente()
+
+        return emergencia_atendida, siguiente_emergencia
+
     def tamaño(self):
         return len(self.elementos)
 
@@ -141,3 +150,7 @@ def construir_heap_emergencias(emergencias):
 def obtener_siguiente_emergencia(emergencias):
     heap = construir_heap_emergencias(emergencias)
     return heap.extraer_maximo()
+
+
+def atender_emergencia_y_obtener_siguiente(heap):
+    return heap.atender_y_obtener_siguiente()
